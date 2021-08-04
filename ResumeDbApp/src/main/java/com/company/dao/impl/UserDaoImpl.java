@@ -50,7 +50,7 @@ public class UserDaoImpl extends AbstractDAO implements UserDaoInter {
         if (nationalityId != null) {
             query.setParameter("nid", nationalityId);
         }
-
+        em.close();
         return query.getResultList();
     }
 
@@ -66,6 +66,7 @@ public class UserDaoImpl extends AbstractDAO implements UserDaoInter {
             return list.get(0);
 
         }
+        em.close();
         return null;
     }
 
@@ -82,6 +83,7 @@ public class UserDaoImpl extends AbstractDAO implements UserDaoInter {
 //            return list.get(0);
 //
 //        }
+    //    em.close();
 //        return null;
 //    }
 
@@ -101,6 +103,7 @@ public class UserDaoImpl extends AbstractDAO implements UserDaoInter {
 //            return list.get(0);
 //
 //        }
+    //    em.close();
 //        return null;
 //    }
 
@@ -117,6 +120,7 @@ public class UserDaoImpl extends AbstractDAO implements UserDaoInter {
 //            return list.get(0);
 //
 //        }
+    //    em.close();
 //        return null;
 //    }
     
@@ -133,6 +137,7 @@ public class UserDaoImpl extends AbstractDAO implements UserDaoInter {
             return list.get(0);
 
         }
+        em.close();
         return null;
     }
     
